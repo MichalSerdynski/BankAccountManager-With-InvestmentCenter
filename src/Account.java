@@ -8,12 +8,14 @@ public class Account {
     public String clientFirstName;
     protected int accountNumber;
     protected boolean isCredit;
+    public static double balance;
 
-    Account(String login, String password, String clientLastName, String clientFirstName, int accountNumber, boolean isCredit){
+    Account(String login, String password, String clientLastName, String clientFirstName, int accountNumber, boolean isCredit, double balance){
         this.clientLastName = clientLastName;
         this.clientFirstName = clientFirstName;
         this.accountNumber = accountNumber;
         this.isCredit = isCredit;
+        this.balance = balance;
     }
 
 
@@ -24,7 +26,7 @@ public class Account {
         LoginPage loginPage = new LoginPage();
         loginPage.Login();
 
-        Account sampleAccount = new Account("login", "password", "Skywalker", "Anakin", 1399132345, true);
+        Account sampleAccount = new Account("login", "password", "Skywalker", "Anakin", 1399132345, true, 1000);
 
         MainMenu mainMenu = new MainMenu();
         mainMenu.OptionsDisplay();

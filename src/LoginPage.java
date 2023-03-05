@@ -36,7 +36,7 @@ class LoginPage {
                                 System.out.println("Wrong Login or Password");
                                 System.out.println("Try again");
                                 System.out.println("If You wish to exit, type 'exit' ");
-                                System.out.println("If You wish to try again, type 'again' ");
+                                System.out.println("If You wish to try again, type any key ");
                                 if (scan.next().equalsIgnoreCase("exit")){
                                         open = false;
                                 }
