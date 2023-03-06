@@ -7,7 +7,7 @@ public class Account {
     public static String clientLastName;
     public String clientFirstName;
     protected int accountNumber;
-    protected boolean isCredit;
+    public static boolean isCredit;
     public static double balance;
 
     Account(String login, String password, String clientLastName, String clientFirstName, int accountNumber, boolean isCredit, double balance){
@@ -26,7 +26,7 @@ public class Account {
         LoginPage loginPage = new LoginPage();
         loginPage.Login();
 
-        Account sampleAccount = new Account("login", "password", "Skywalker", "Anakin", 1399132345, true, 1000);
+        Account sampleAccount = new Account("login", "password", "Skywalker", "Anakin", 1399132345, false, 1000);
 
         MainMenu mainMenu = new MainMenu();
         mainMenu.OptionsDisplay();
