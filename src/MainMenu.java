@@ -69,9 +69,10 @@ public class MainMenu {
         }
     }
     public void OptionsDisplay() {
+        int option = 0;
         boolean menuOpen = true;
         System.out.println("Welcome Mr." + Account.clientLastName + "\n");
-        while (menuOpen) {
+        while (menuOpen && option!=7) {
             System.out.println("Main Menu");
             System.out.println("1. Check Balance");
             System.out.println("2. Deposit Money");
@@ -83,9 +84,9 @@ public class MainMenu {
             System.out.println("\n");
             System.out.println("Type the number of chosen option to access it");
 
-            int option = scan.nextInt();
+            option = scan.nextInt();
 
-            if (option != 7) {
+
                 switch (option) {
                     case 1:
                         System.out.println("Your balance is: " + Account.balance + " USD");
@@ -110,10 +111,18 @@ public class MainMenu {
                        creditEligibility();
 
                         break;
+                    case 6:
+                        break;
+                    case 7:
+                        System.out.println("Thank You, see You soon!");
+                        break;
+                    default:
+                        break;
 
 
 
-                }
+
+
 
             }
 
