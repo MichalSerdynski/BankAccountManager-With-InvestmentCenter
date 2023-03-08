@@ -102,9 +102,11 @@ public class MainMenu {
                         withdrawMoney(withdraw);
                         break;
                     case 4:
-                        System.out.println("Investment Center");
-                        System.out.println("Current Investment Budget: " + Account.investmentBudget);
-                        //Needs to be finished
+                        System.out.println("Investment Center\n");
+                        System.out.println("Current Investment Budget: " + Account.availableFunds + "\n");
+
+
+
                         break;
                     case 5:
 
