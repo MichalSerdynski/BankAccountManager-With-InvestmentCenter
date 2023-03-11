@@ -12,7 +12,7 @@ public class Account {
     public static double investedFunds;
     public static double availableFunds;
 
-    Account(String login, String password, String clientLastName, String clientFirstName, int accountNumber, boolean isCredit, double balance, double availableFunds, double investedFunds ){
+    Account(String login, String password, String clientLastName, String clientFirstName, int accountNumber, boolean isCredit, double balance, double availableFunds, double investedFunds) {
         this.login = login;
         this.password = password;
         this.clientLastName = clientLastName;
@@ -25,25 +25,14 @@ public class Account {
     }
 
 
-
     public static void main(String[] args) {
-
 
 
         LoginPage loginPage = new LoginPage();
         loginPage.Login();
 
 
-
-
-
-
-
-
-
-        }
-
-
-
-
     }
+
+
+}

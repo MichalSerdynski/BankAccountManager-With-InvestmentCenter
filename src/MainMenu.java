@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 public class MainMenu {
     Scanner scan = new Scanner(System.in);
+
     public MainMenu() {
 
     }
@@ -46,33 +47,32 @@ public class MainMenu {
         }
     }
 
-    public void depositMoney(double deposit){
+    public void depositMoney(double deposit) {
         Account.balance += deposit;
         System.out.println("Current balance: " + Account.balance + " USD" + "\n");
 
     }
 
     public void withdrawMoney(double withdraw) {
-        if(withdraw > Account.balance) {
+        if (withdraw > Account.balance) {
             if (Account.isCredit == true) {
                 Account.balance -= withdraw;
                 System.out.println("Current balance: " + Account.balance + " USD" + "\n");
 
-            }
-            else{
+            } else {
                 System.out.println("Sorry, You do not have enough funds for this transaction and Your account is not a credit category. You can apply for credit account in the menu\n");
             }
-        }
-        else{
+        } else {
             Account.balance -= withdraw;
             System.out.println("Current balance: " + Account.balance + " USD" + "\n");
         }
     }
+
     public void OptionsDisplay() {
         int option = 0;
         boolean menuOpen = true;
         System.out.println("Welcome Mr." + Account.clientLastName + "\n");
-        while (menuOpen && option!=7) {
+        while (menuOpen && option != 7) {
             System.out.println("Main Menu");
             System.out.println("1. Check Balance");
             System.out.println("2. Deposit Money");
@@ -87,43 +87,38 @@ public class MainMenu {
             option = scan.nextInt();
 
 
-                switch (option) {
-                    case 1:
-                        System.out.println("Your balance is: " + Account.balance + " USD");
-                        break;
-                    case 2:
-                        System.out.println("Enter the amount you wish to deposit: ");
-                        double deposit = scan.nextDouble();
-                        depositMoney(deposit);
-                        break;
-                    case 3:
-                        System.out.println("Enter the amount you wish to withdraw: ");
-                        double withdraw = scan.nextDouble();
-                        withdrawMoney(withdraw);
-                        break;
-                    case 4:
-                        System.out.println("Investment Center\n");
-                        InvestmentCenter investmentCenter = new InvestmentCenter();
-                        InvestmentCenter.InvestmentCenter();
+            switch (option) {
+                case 1:
+                    System.out.println("Your balance is: " + Account.balance + " USD");
+                    break;
+                case 2:
+                    System.out.println("Enter the amount you wish to deposit: ");
+                    double deposit = scan.nextDouble();
+                    depositMoney(deposit);
+                    break;
+                case 3:
+                    System.out.println("Enter the amount you wish to withdraw: ");
+                    double withdraw = scan.nextDouble();
+                    withdrawMoney(withdraw);
+                    break;
+                case 4:
+                    System.out.println("Investment Center\n");
+                    InvestmentCenter.InvestmentCenter();
 
 
-                        break;
-                    case 5:
+                    break;
+                case 5:
 
-                       creditEligibility();
+                    creditEligibility();
 
-                        break;
-                    case 6:
-                        break;
-                    case 7:
-                        System.out.println("Thank You, see You soon!");
-                        break;
-                    default:
-                        break;
-
-
-
-
+                    break;
+                case 6:
+                    break;
+                case 7:
+                    System.out.println("Thank You, see You soon!");
+                    break;
+                default:
+                    break;
 
 
             }
