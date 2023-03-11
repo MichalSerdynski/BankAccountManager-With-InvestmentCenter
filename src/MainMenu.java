@@ -103,9 +103,8 @@ public class MainMenu {
                         break;
                     case 4:
                         System.out.println("Investment Center\n");
-                        System.out.println("Current Investment Budget: " + Account.availableFunds + "\n");
                         InvestmentCenter investmentCenter = new InvestmentCenter();
-                        System.out.println(investmentCenter);
+                        InvestmentCenter.InvestmentCenter();
 
 
                         break;
